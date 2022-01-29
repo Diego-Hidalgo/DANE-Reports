@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DANE_Reports"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="500" Width="800"
+        ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Margin="0,30,0,80" >
+            <Button x:Name="importBtn" Content="Importar" Height="50" FontSize="27" Click="ImportBtn_Click" />
+            <Grid Height="15" />
+            <Button x:Name="searchBtn" Content="Buscar" Height="50" FontSize="27" Click="SearchBtn_Click"/>
+            <Grid Height="15" />
+            <Button x:Name="tableBtn" Content="Tabla" Height="50" FontSize="27" Click="TableBtn_Click" />
+            <Grid Height="15" />
+            <Button x:Name="graphBtn" Content="Gráfico" Height="50" FontSize="27" Click="GraphBtn_Click" />
+        </StackPanel>
     </Grid>
 </Window>

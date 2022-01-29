@@ -24,5 +24,26 @@ namespace DANE_Reports
         {
             InitializeComponent();
         }
+
+        private void ImportBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TableBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GraphBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
