@@ -71,7 +71,7 @@ namespace DANE_Reports.model
         {
             int start = 0;
             int end = _data.Count - 1;
-            while(start < end)
+            while(start <= end)
             {
                 int mid = (start + end) / 2;
                 Data current = _data[mid];
