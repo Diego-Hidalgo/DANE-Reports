@@ -2,6 +2,7 @@
 {
     internal class Data
     {
+
         private string stateName;
         private string stateId;
         private string cityName;
