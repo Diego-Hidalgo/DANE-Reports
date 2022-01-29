@@ -3,58 +3,58 @@
     internal class Data
     {
 
-        private string stateName;
-        private string stateId;
-        private string cityName;
-        private string cityId;
-        private string cityType;
+        private string _stateName;
+        private string _stateId;
+        private string _cityName;
+        private string _cityId;
+        private string _cityType;
 
         internal Data()
         {
-            stateName = default;
-            stateId = default;
-            cityName = default;
-            cityId = default;
-            cityType = default;
+            _stateName = default;
+            _stateId = default;
+            _cityName = default;
+            _cityId = default;
+            _cityType = default;
         }
 
         internal Data(string StateName, string StateId, string CityName, string CityId, string CityType)
         {
-            this.stateName = StateName;
-            this.stateId = StateId;
-            this.cityName = CityName;
-            this.cityId = CityId;
-            this.cityType = CityType;
+            this._stateName = StateName;
+            this._stateId = StateId;
+            this._cityName = CityName;
+            this._cityId = CityId;
+            this._cityType = CityType;
         }
 
         public string StateName
         {
-            get => stateName;
-            set => stateName = value;
+            get => _stateName;
+            set => _stateName = value;
         }
 
         public string StateId
         {
-            get => stateId;
-            set => stateId = value;
+            get => _stateId;
+            set => _stateId = value;
         }
 
         public string CityName
         {
-            get => cityName;
-            set => cityName = value;
+            get => _cityName;
+            set => _cityName = value;
         }
 
         public string CityId
         {
-            get => cityId;
-            set => cityId = value;
+            get => _cityId;
+            set => _cityId = value;
         }
 
         public string CityType
         {
-            get => cityType;
-            set => cityType = value;
+            get => _cityType;
+            set => _cityType = value;
         }
 
     }
