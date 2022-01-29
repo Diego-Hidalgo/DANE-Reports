@@ -61,6 +61,7 @@
     </Page>
     <Compile Include="model\DANEData.cs" />
     <Compile Include="model\Data.cs" />
+    <Compile Include="model\StateData.cs" />
     <Compile Include="ui\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
