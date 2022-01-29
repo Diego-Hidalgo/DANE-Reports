@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DANE_Reports.model
@@ -27,19 +28,24 @@ namespace DANE_Reports.model
         }
         public void ImportFileData(string FilePath, char separator, bool header)
         {
+            bool endData = false;
             StreamReader sr = new StreamReader(FilePath);
             if (header)
                 sr.ReadLine();
             string line;
-            while ((line = sr.ReadLine()) != null)
+            while ((line = sr.ReadLine()) != null && !endData)
             {
-                string[] parts = line.Split(separator);
-                if (parts.Length == 5)
-                {
-                    AddCity(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                try {
+                    string[] parts = line.Split(separator);
+                    int checking = Convert.ToInt32(parts[0]);
+                    if (parts.Length == 5)
+                    {
+                        AddCity(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                    }
                 }
-            }
-        }
+                catch (FormatException) { endData = true; }
+            }//End while
+        }//End importFileData
 
         private void AddCity(string sCode, string cCode, string sName, string cName, string cType)
         {
