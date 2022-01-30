@@ -8,11 +8,11 @@
 
     <Grid Background="White">
         <Label Content="Ruta del archivo:" FontSize="20" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" Height="35" Width="180"/>
-        <TextBox x:Name="PathTxt" IsReadOnly="True" FontSize="18" HorizontalAlignment="Left" Margin="230,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="190"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="420,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,-0.169" Height="35" Width="50"/>
+        <TextBox x:Name="PathTxt" IsReadOnly="True" FontSize="13" HorizontalAlignment="Left" Margin="230,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="190"/>
+        <Button x:Name="ExplorerBtn" Content="..." HorizontalAlignment="Left" Margin="420,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,-0.169" Height="35" Width="50" Click="ExplorerBtn_Click"/>
 
         <Label Content="Separador:" FontSize="20" HorizontalAlignment="Left" Margin="45,92,0,0" VerticalAlignment="Top" Height="35" Width="180"/>
-        <TextBox x:Name="SeparatorTxt" FontSize="18" TextAlignment="Center" HorizontalAlignment="Left" Margin="230,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="50"/>
+        <TextBox x:Name="SeparatorTxt" FontSize="18" MaxLength="1" TextAlignment="Center" HorizontalAlignment="Left" Margin="230,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="50"/>
 
         <Label Content="¿Contiene encabezado?" FontSize="20" HorizontalAlignment="Left" Margin="45,145,0,0" VerticalAlignment="Top" Height="38" Width="223"/>
         <StackPanel Margin="50,190,0,69">
