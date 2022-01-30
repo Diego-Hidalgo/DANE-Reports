@@ -4,11 +4,24 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DANE_Reports.ui"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      mc:Ignorable="d" d:DesignWidth="800" Height="325" >
 
-    <Grid>
-        <Button x:Name="Test" Content="CLICK ME!!!" Click="Test_Click"/>
+    <Grid Background="White">
+        <Label Content="Ruta del archivo:" FontSize="20" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" Height="35" Width="180"/>
+        <TextBox x:Name="PathTxt" IsReadOnly="True" FontSize="18" HorizontalAlignment="Left" Margin="230,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="190"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="420,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,-0.169" Height="35" Width="50"/>
+
+        <Label Content="Separador:" FontSize="20" HorizontalAlignment="Left" Margin="45,92,0,0" VerticalAlignment="Top" Height="35" Width="180"/>
+        <TextBox x:Name="SeparatorTxt" FontSize="18" TextAlignment="Center" HorizontalAlignment="Left" Margin="230,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="50"/>
+
+        <Label Content="¿Contiene encabezado?" FontSize="20" HorizontalAlignment="Left" Margin="45,145,0,0" VerticalAlignment="Top" Height="38" Width="223"/>
+        <StackPanel Margin="50,190,0,69">
+            <RadioButton Content="SÍ" IsChecked="True" Height="30" FontSize="21"/>
+            <RadioButton Content="NO" Height="30" FontSize="21"/>
+        </StackPanel>
+
+        <Button Content="Importar Datos" FontSize="23" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.191,0.074" Width="173"/>
+
+
     </Grid>
 </Page>
