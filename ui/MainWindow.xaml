@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DANE_Reports"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800"
+        Height="450" Width="800"
         ResizeMode="NoResize">
-    <Grid RenderTransformOrigin="0.5,0.5">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,0,0">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
             <ColumnDefinition />
@@ -18,15 +19,27 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" Margin="0,30,0,80" >
-            <Button x:Name="importBtn" Content="Importar" Height="50" FontSize="27" Click="ImportBtn_Click" />
+        <StackPanel Grid.Row="1" Margin="0,31,0,0" >
+            <Button x:Name="importBtn" Content="Importar" Height="50" FontSize="27" Click="ImportBtn_Click" Width="170" />
             <Grid Height="15" />
-            <Button x:Name="searchBtn" Content="Buscar" Height="50" FontSize="27" Click="SearchBtn_Click"/>
+            <Button x:Name="searchBtn" Content="Buscar" Height="50" FontSize="27" Click="SearchBtn_Click" Width="170"/>
             <Grid Height="15" />
-            <Button x:Name="tableBtn" Content="Tabla" Height="50" FontSize="27" Click="TableBtn_Click" />
+            <Button x:Name="tableBtn" Content="Tabla" Height="50" FontSize="27" Click="TableBtn_Click" Width="170" />
             <Grid Height="15" />
-            <Button x:Name="graphBtn" Content="Gráfico" Height="50" FontSize="27" Click="GraphBtn_Click" />
+            <Button x:Name="graphBtn" Content="Gráfico" Height="50" FontSize="27" Click="GraphBtn_Click" Width="170" />
         </StackPanel>
-        <Frame x:Name="MyFrame" Grid.Column="1" Grid.Row="1"/>
+
+        <Frame x:Name="MyFrame" Grid.Column="1" Grid.Row="1" Margin="0,0,20,27"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="110,0,0,0" TextWrapping="Wrap" Text="REPORTES" VerticalAlignment="Center" Height="48" RenderTransformOrigin="0.5,0.5" Width="370" TextAlignment="Center" FontSize="36">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
     </Grid>
 </Window>

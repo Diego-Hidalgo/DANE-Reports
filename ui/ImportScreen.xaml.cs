@@ -18,9 +18,9 @@ namespace DANE_Reports.ui
     /// <summary>
     /// Lógica de interacción para Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class ImportScreen : Page
     {
-        public Page1()
+        public ImportScreen()
         {
             InitializeComponent();
         }

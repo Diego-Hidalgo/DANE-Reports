@@ -30,7 +30,7 @@ namespace DANE_Reports
         private void ImportBtn_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Import Clicked");
-            MyFrame.NavigationService.Navigate(new Uri("ui/Page1.xaml", UriKind.Relative));
+            MyFrame.NavigationService.Navigate(new Uri("ui/ImportScreen.xaml", UriKind.Relative));
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
