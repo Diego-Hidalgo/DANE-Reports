@@ -13,6 +13,7 @@ namespace DANE_Reports.model
         public DANEData()
         {
             this._data = new List<Data>();
+            this._states = new List<StateData>();
         }
 
         public List<Data> Data
@@ -37,7 +38,7 @@ namespace DANE_Reports.model
             {
                 try {
                     string[] parts = line.Split(separator);
-                    int checking = Convert.ToInt32(parts[0]);
+                    //int checking = Convert.ToInt32(parts[0]);
                     if (parts.Length == 5)
                     {
                         AddCity(parts[0], parts[1], parts[2], parts[3], parts[4]);
@@ -73,7 +74,7 @@ namespace DANE_Reports.model
             _states.Insert(j, new StateData(sName, 1));
         }
 
-        public int FindCityById(string id)
+        public Data FindCityById(string id)
         {
             int start = 0;
             int end = _data.Count - 1;
@@ -82,13 +83,13 @@ namespace DANE_Reports.model
                 int mid = (start + end) / 2;
                 Data current = _data[mid];
                 if (current.CityId.CompareTo(id) == 0)
-                    return mid;
+                    return _data[mid];
                 else if (current.CityId.CompareTo(id) < 0)
                     start = mid + 1;
                 else
                     end = mid - 1;
             }
-            return -1;
+            return null;
         }
 
     }

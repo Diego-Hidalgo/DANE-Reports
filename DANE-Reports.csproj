@@ -60,6 +60,8 @@
     </Compile>
     <Compile Include="ui\TableScreen.xaml.cs">
       <DependentUpon>TableScreen.xaml</DependentUpon>
+    <Compile Include="ui\SearchScreen.xaml.cs">
+      <DependentUpon>SearchScreen.xaml</DependentUpon>
     </Compile>
     <Page Include="ui\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +83,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ui\TableScreen.xaml">
+    <Page Include="ui\SearchScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
