@@ -1,5 +1,7 @@
 ﻿using System.Windows.Controls;
+using DANE_Reports.model;
 using Microsoft.Win32;
+using System;
 
 namespace DANE_Reports.ui
 {
@@ -8,6 +10,8 @@ namespace DANE_Reports.ui
     /// </summary>
     public partial class ImportScreen : Page
     {
+
+        internal DANEData Manager { get; set; }
 
         public ImportScreen()
         {
@@ -23,5 +27,6 @@ namespace DANE_Reports.ui
             if (exp.ShowDialog() == true)
                 PathTxt.Text = exp.FileName;
         }
+
     }
 }

@@ -11,7 +11,7 @@ namespace DANE_Reports
     public partial class MainWindow : Window
     {
 
-        private DANEData Manager;
+        internal DANEData Manager { get; set; }
 
         public MainWindow()
         {
@@ -21,12 +21,21 @@ namespace DANE_Reports
 
         private void ImportBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.NavigationService.Navigate(new Uri("ui/ImportScreen.xaml", UriKind.Relative), Manager);
+            ImportScreen importScreen = new ImportScreen
+            {
+                Manager = Manager
+            };
+            MyFrame.Navigate(importScreen);
+
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.NavigationService.Navigate(new Uri("ui/SearchScreen.xaml", UriKind.Relative), Manager);
+            SearchScreen searchScreen = new SearchScreen
+            {
+                Manager = Manager
+            };
+            MyFrame.Navigate(searchScreen);
         }
 
         private void TableBtn_Click(object sender, RoutedEventArgs e)

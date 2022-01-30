@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DANE_Reports.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace DANE_Reports.ui
     /// </summary>
     public partial class SearchScreen : Page
     {
+
+        internal DANEData Manager { get; set; }
+
         public SearchScreen()
         {
             InitializeComponent();
         }
+
+
+
     }
 }
