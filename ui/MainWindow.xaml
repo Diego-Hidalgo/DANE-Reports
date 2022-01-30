@@ -27,5 +27,6 @@
             <Grid Height="15" />
             <Button x:Name="graphBtn" Content="Gráfico" Height="50" FontSize="27" Click="GraphBtn_Click" />
         </StackPanel>
+        <Frame x:Name="MyFrame" Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Window>
