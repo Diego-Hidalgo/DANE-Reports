@@ -40,7 +40,11 @@ namespace DANE_Reports
 
         private void TableBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.NavigationService.Navigate(new Uri("ui/TableScreen.xaml", UriKind.Relative));
+            TableScreen tableScreen = new TableScreen
+            {
+                Manager = Manager
+            };
+            MyFrame.Navigate(tableScreen);
         }
 
         private void GraphBtn_Click(object sender, RoutedEventArgs e)

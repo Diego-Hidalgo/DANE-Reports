@@ -38,13 +38,15 @@ namespace DANE_Reports.model
             {
                 try {
                     string[] parts = line.Split(separator);
-                    //int checking = Convert.ToInt32(parts[0]);
+                    int checking = Convert.ToInt32(parts[0]);
                     if (parts.Length == 5)
                     {
+                        Console.WriteLine("Se agregara una ciudad");
                         AddCity(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                        Console.WriteLine("nombre de la ciudad {0}", parts[3]);
                     }
                 }
-                catch (FormatException) { endData = true; }
+                catch (FormatException) { Console.WriteLine("Format exception"); endData = true; }
             }//End while
         }//End importFileData
 

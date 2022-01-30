@@ -5,10 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DANE_Reports.ui"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="TableScreen">
+      d:DesignHeight="325" d:DesignWidth="600" ShowsNavigationUI="False"
+      Title="TableScreen"
+      Loaded="Page_Loaded">
 
-    <Grid Margin= "10">
-        <DataGrid Name ="tableData"></DataGrid>
+    <Grid Background="White">
+        <DataGrid Name = "tableData" Background="White" d:ItemsSource="{d:SampleData ItemCount=5}"/>
     </Grid>
 </Page>
