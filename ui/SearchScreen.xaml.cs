@@ -1,18 +1,6 @@
 ﻿using DANE_Reports.model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows;
 
 namespace DANE_Reports.ui
 {
@@ -29,7 +17,37 @@ namespace DANE_Reports.ui
             InitializeComponent();
         }
 
+        private void SearchBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            string id = IdTxt.Text;
+            if(string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Debe llenar el campo.");
+                return;
+            }
+            ClearLabels();
+            Data found = Manager.FindCityById(id);
+            if(found == null)
+            {
+                MessageBox.Show("No se encontró el id: " + id);
+                return;
+            }
+            StateIdLbl.Content = found.StateId;
+            StateNameLbl.Content = found.StateName;
+            CityIdLbl.Content = found.CityId;
+            CityNameLbl.Content = found.CityName;
+            TypeLbl.Content = found.CityType;
+            IdTxt.Text = "";
+        }
 
+        private void ClearLabels()
+        {
+            StateIdLbl.Content = "";
+            StateNameLbl.Content = "";
+            CityIdLbl.Content = "";
+            CityNameLbl.Content = "";
+            TypeLbl.Content = "";
+        }
 
     }
 }

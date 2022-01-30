@@ -10,7 +10,7 @@
     <Grid Background="White">
         <Label Content="Código de municipio:" FontSize="20" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" Height="45" Width="205"/>
         <TextBox x:Name="IdTxt" FontSize="18" HorizontalAlignment="Left" Margin="255,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="125"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="385,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,-0.169" Height="35" Width="50"/>
+        <Button x:Name="SearchBtn" Content="Buscar" HorizontalAlignment="Left" Margin="385,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.53,-0.169" Height="35" Width="50" Click="SearchBtn_Click"/>
 
         <Label Content="Resultado de búsqueda" FontSize="25" HorizontalAlignment="Left" Margin="45,82,0,0" VerticalAlignment="Top" Width="308"/>
 
