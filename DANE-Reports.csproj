@@ -58,6 +58,9 @@
     <Compile Include="ui\ImportScreen.xaml.cs">
       <DependentUpon>ImportScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ui\SearchScreen.xaml.cs">
+      <DependentUpon>SearchScreen.xaml</DependentUpon>
+    </Compile>
     <Page Include="ui\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ui\ImportScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ui\SearchScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,18 +1,7 @@
-﻿using DANE_Reports.ui;
+﻿using DANE_Reports.model;
+using DANE_Reports.ui;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DANE_Reports
 {
@@ -22,20 +11,22 @@ namespace DANE_Reports
     public partial class MainWindow : Window
     {
 
+        private DANEData Manager;
+
         public MainWindow()
         {
             InitializeComponent();
+            Manager = new DANEData();
         }
 
         private void ImportBtn_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Import Clicked");
-            MyFrame.NavigationService.Navigate(new Uri("ui/ImportScreen.xaml", UriKind.Relative));
+            MyFrame.NavigationService.Navigate(new Uri("ui/ImportScreen.xaml", UriKind.Relative), Manager);
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MyFrame.NavigationService.Navigate(new Uri("ui/SearchScreen.xaml", UriKind.Relative), Manager);
         }
 
         private void TableBtn_Click(object sender, RoutedEventArgs e)

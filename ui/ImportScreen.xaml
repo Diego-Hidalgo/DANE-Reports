@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DANE_Reports.ui"
-      mc:Ignorable="d" d:DesignWidth="800" Height="325" >
+      mc:Ignorable="d" d:DesignWidth="600" Height="325"  ShowsNavigationUI="False">
 
     <Grid Background="White">
         <Label Content="Ruta del archivo:" FontSize="20" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" Height="35" Width="180"/>
@@ -20,7 +20,7 @@
             <RadioButton Content="NO" Height="30" FontSize="21"/>
         </StackPanel>
 
-        <Button Content="Importar Datos" FontSize="23" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.191,0.074" Width="173"/>
+        <Button Content="Importar Datos" FontSize="23" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.191,0.074" Width="173" />
 
 
     </Grid>
