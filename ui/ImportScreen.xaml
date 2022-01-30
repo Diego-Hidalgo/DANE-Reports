@@ -17,11 +17,11 @@
 
         <Label Content="¿Contiene encabezado?" FontSize="20" HorizontalAlignment="Left" Margin="45,145,0,0" VerticalAlignment="Top" Height="38" Width="223"/>
         <StackPanel Margin="50,190,0,69">
-            <RadioButton Content="SÍ" IsChecked="True" Height="30" FontSize="21"/>
-            <RadioButton Content="NO" Height="30" FontSize="21"/>
+            <RadioButton GroupName="Selection" x:Name="Y" Content="SÍ" IsChecked="True" Height="30" FontSize="21"/>
+            <RadioButton GroupName="Selection" x:Name="N" Content="NO" Height="30" FontSize="21"/>
         </StackPanel>
 
-        <Button Content="Importar Datos" FontSize="23" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.191,0.074" Width="173" />
+        <Button x:Name="ImpData_Btn" Content="Importar Datos" FontSize="23" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.191,0.074" Width="173" Click="ImpData_Btn_Click" />
 
 
     </Grid>
